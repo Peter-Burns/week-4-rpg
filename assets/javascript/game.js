@@ -53,7 +53,6 @@ $('.charSelect').on('click', function(){
 		$('#secondLine').empty();
 	}
 });
-updateHealth();
 $('#attack').on('click', function(){
 	if(gameOver===false){
 		characters[currentEnemy]['health']-=characters[playerChar]['currentAttack'];
@@ -88,3 +87,4 @@ $('#attack').on('click', function(){
 $('#restart').on('click',function(){
 	location.reload();
 });
+updateHealth();
