@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Star Wars Game</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class='titleHeader'>
+		Star Wars RPG!
+	</div>
+	<div class ='imageHolder protagonist' id='firstImageHolder'>
+		<button class='charSelect' value='obi'>
+			<p>Obi-Wan Kenobi</p>
+			<img src="assets/images/obi.jpg" width=150 height=150>
+			<div id='obiHealth'></div>
+		</button>
+		<button class='charSelect' value='luke'>
+			<p>Luke Skywalker</p>
+			<img src="assets/images/luke.jpg" width=150 height=150>
+			<div id='lukeHealth'></div>
+		</button>
+		<button class='charSelect' value='sidious'>
+			<p>Darth Sidious</p>
+			<img src="assets/images/sidious.jpg" width=150 height=150>
+			<div id='sidiousHealth'></div>
+		</button>
+		<button class='charSelect' value='maul'>
+			<p>Darth Maul</p>
+			<img src="assets/images/maul.jpg" width=150 height=150>
+			<div id='maulHealth'></div>
+		</button>
+	</div>
+	<p>
+		Your Character
+	</p>
+	<div class='imageHolder enemies' id='secondImageHolder'>
+		<div>
+			<img src="">
+		</div>
+	</div>
+	<p>
+		Enemies Available to Attack
+	</p>
+	<div class='imageHolder'>
+
+	</div>
+	<p>
+		Fight Section
+	</p>
+	<button id='attack'>
+		Attack
+	</button>
+	<p>
+		Defender
+	</p>
+	<div class='imageHolder	'>
+		
+	</div>
+	<p id='firstLine'></p>
+	<p id='secondLine'></p>
+</body>
+</html>
