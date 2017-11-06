@@ -62,8 +62,16 @@ $('#attack').on('click', function(){
 		characters[playerChar]['currentAttack']+=characters[playerChar]['baseAttack'];
 		updateHealth();
 		if(characters[playerChar]['health']<=0){
-			$('#firstLine').text('You have been defeated!');
-			$('#restart').show();
+			if(enemiesDefeated===2 && characters[currentEnemy]['health']<=0){
+				$('#firstLine').text('You have won a pyrrhic victory...');
+				$('#secondLine').text('Odin will surely welcome you in Valhalla');
+				$('#restart').show();
+			}
+			else{
+				$('#firstLine').text('You have been defeated!');
+				$('#secondLine').empty();
+				$('#restart').show();
+			}
 			gameOver=true;
 		}
 		else if(characters[currentEnemy]['health']<=0){
