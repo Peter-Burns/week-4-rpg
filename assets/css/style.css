@@ -1,0 +1,37 @@
+body>p {
+	background:black;
+	color:white;
+	width:200px;
+	text-align:center;
+	margin:5px 0px;
+}
+.defender button{
+	background:black;
+	color:white;
+	border:red solid 2px;
+}
+.enemies.protagonist button{
+	background:red;
+}
+.protagonist button{
+	background:white;
+	border:green solid 2px;
+}
+.enemies .protagonist button{
+	background:red;
+	border:black solid 2px;
+}
+.playerChar button {
+	background:white;
+	border:green solid 4px;
+}
+h1{
+	color:white;
+	font-size:32px;
+	text-align:center;
+}
+body{
+	background:url('../images/background.png') no-repeat center center fixed;
+	background-size: cover;
+	margin:0 auto;
+}
