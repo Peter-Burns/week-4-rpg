@@ -1,27 +1,27 @@
 var characters= {
 	luke:{ 
-		health:100,
+		health:80,
 		baseAttack:10,
 		currentAttack:10,
-		counterAttack:15
+		counterAttack:3
 	},
 	obi:{ 
-		health:120,
-		baseAttack:8,
-		currentAttack:8,
-		counterAttack:12
+		health:100,
+		baseAttack:9,
+		currentAttack:9,
+		counterAttack:19
 	},
 	maul:{ 
-		health:150,
+		health:120,
 		baseAttack:6,
 		currentAttack:6,
-		counterAttack:10
+		counterAttack:20
 	},
 	sidious:{ 
-		health:200,
+		health:220,
 		baseAttack:3,
 		currentAttack:3,
-		counterAttack:8
+		counterAttack:2
 	}
 }
 var nameConverter = {
