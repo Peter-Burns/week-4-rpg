@@ -3,32 +3,30 @@ var characters= {
 		health:80,
 		baseAttack:10,
 		currentAttack:10,
-		counterAttack:3
+		counterAttack:3,
+		name:'Luke Skywalker'
 	},
 	obi:{ 
 		health:100,
 		baseAttack:9,
 		currentAttack:9,
-		counterAttack:19
+		counterAttack:19,
+		name:'Obi-Wan Kenobi'
 	},
 	maul:{ 
 		health:120,
 		baseAttack:6,
 		currentAttack:6,
-		counterAttack:20
+		counterAttack:20,
+		name: 'Darth Maul'
 	},
 	sidious:{ 
 		health:220,
 		baseAttack:3,
 		currentAttack:3,
-		counterAttack:2
+		counterAttack:2,
+		name: 'Darth Sidious'
 	}
-}
-var nameConverter = {
-	luke:'Luke Skywalker',
-	maul:'Darth Maul',
-	obi:'Obi-Wan Kenobi',
-	sidious:'Darth Sidious'
 }
 var playerChar='';
 var currentEnemy='';
@@ -55,10 +53,10 @@ $('.charSelect').on('click', function(){
 });
 $('#attack').on('click', function(){
 	if(gameOver===false){
+		$('#firstLine').text('You attacked '+characters[currentEnemy]['name']+' for '+characters[playerChar]['currentAttack']+' damage.');
+		$('#secondLine').text(characters[currentEnemy]['name']+' attacked you back for ' + characters[currentEnemy]['counterAttack']+' damage.');
 		characters[currentEnemy]['health']-=characters[playerChar]['currentAttack'];
 		characters[playerChar]['health']-=characters[currentEnemy]['counterAttack'];
-		$('#firstLine').text('You attacked '+nameConverter[currentEnemy]+' for '+characters[playerChar]['currentAttack']+' damage.');
-		$('#secondLine').text(nameConverter[currentEnemy]+' attacked you back for ' + characters[currentEnemy]['counterAttack']+' damage.');
 		characters[playerChar]['currentAttack']+=characters[playerChar]['baseAttack'];
 		updateHealth();
 		if(characters[playerChar]['health']<=0){
@@ -78,7 +76,7 @@ $('#attack').on('click', function(){
 			$('#currentEnemy').empty();
 			enemiesDefeated++;
 			if(enemiesDefeated<3){
-				$('#firstLine').text('You defeated '+nameConverter[currentEnemy]+'!');	
+				$('#firstLine').text('You defeated '+characters[currentEnemy]['name']+'!');	
 				$('#secondLine').text('Select another adversary to continue');
 				currentEnemy='';
 				console.log($('.protagonist').text().replace(/ /g,''));
