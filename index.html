@@ -2,84 +2,82 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Star Wars Game</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<title>Star Wars Game</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class='container'>
-        <div class='titleHeader'>
-            <h1>Star Wars RPG!</h1>
-        </div>
-        <div class='protagonist' id='firstImageHolder'>
-            <button class='charSelect' value='obi'>
-                <p>Obi-Wan Kenobi</p>
-                <img src="assets/images/obi.jpg" width=150 height=150>
-                <p id='obiHealth'></p>
-            </button>
-            <button class='charSelect' value='luke'>
-                <p>Luke Skywalker</p>
-                <img src="assets/images/luke.jpg" width=150 height=150>
-                <p id='lukeHealth'></p>
-            </button>
-            <button class='charSelect' value='sidious'>
-                <p>Darth Sidious</p>
-                <img src="assets/images/sidious.jpg" width=150 height=150>
-                <p id='sidiousHealth'></p>
-            </button>
-            <button class='charSelect' value='maul'>
-                <p>Darth Maul</p>
-                <img src="assets/images/maul.jpg" width=150 height=150>
-                <p id='maulHealth'></p>
-            </button>
-        </div>
-        <div class='row'>
-            <div class='col-xs-6'>
-                <p class='sectionHeader'>
-                    Your Character
-                </p>
-                <div class='playerChar' id='playerChar'>
-                </div>
-            </div>
-            <div class='col-xs-6'>
-                <p class='sectionHeader'> 
-                    Defender
-                </p>
-                <div id='currentEnemy' class='defender'>
+	<div class='container'>
+		<div class='titleHeader'>
+			<h1>Star Wars RPG!</h1>
+		</div>
+		<div class='protagonist' id='firstImageHolder'>
+			<button class='charSelect' value='obi'>
+				<p>Obi-Wan Kenobi</p>
+				<img src="assets/images/obi.jpg" width=150 height=150>
+				<p id='obiHealth'></p>
+			</button>
+			<button class='charSelect' value='luke'>
+				<p>Luke Skywalker</p>
+				<img src="assets/images/luke.jpg" width=150 height=150>
+				<p id='lukeHealth'></p>
+			</button>
+			<button class='charSelect' value='sidious'>
+				<p>Darth Sidious</p>
+				<img src="assets/images/sidious.jpg" width=150 height=150>
+				<p id='sidiousHealth'></p>
+			</button>
+			<button class='charSelect' value='maul'>
+				<p>Darth Maul</p>
+				<img src="assets/images/maul.jpg" width=150 height=150>
+				<p id='maulHealth'></p>
+			</button>
+		</div>
+		<div class='row'>
+			<div class='col-xs-6'>
+				<p class='sectionHeader'>
+					Your Character
+				</p>
+				<div class='playerChar' id='playerChar'>
+				</div>
+			</div>
+			<div class='col-xs-6'>
+				<p class='sectionHeader'>
+					Defender
+				</p>
+				<div id='currentEnemy' class='defender'>
 
-                </div>
+				</div>
 
-            </div>
-        </div>
-        <div class='row'>
-            <div class='col-xs-6'>
-                <p class='sectionHeader'>
-                    Fight Section
-                </p>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-6'>
+				<p class='sectionHeader'>
+					Fight Section
+				</p>
 
-                <button id='attack'>
-                    Attack
-                </button>
-                <div class='row'>
-                    <p id='firstLine'></p>
-                    <p id='secondLine'></p>
-                </div>
-            </div>
-            <div class='col-xs-6'>
-                <p class='sectionHeader'>
-                    Enemies Available to Attack
-                </p>
-                <div class='enemies'>
+				<button id='attack'>
+					Attack
+				</button>
+				<p id='firstLine'></p>
+				<p id='secondLine'></p>
+				<button id='restart' hidden>Restart</button>
+			</div>
+			<div class='col-xs-6'>
+				<p class='sectionHeader'>
+					Enemies Available to Attack
+				</p>
+				<div class='enemies'>
 
-                </div>
+				</div>
 
-            </div>
-        </div>
-        <button id='restart' hidden>Restart</button>
-    </div>
-    <script src='assets/javascript/game.js'></script>
+			</div>
+		</div>
+	</div>
+	<script src='assets/javascript/game.js'></script>
 </body>
 
 </html>
