@@ -77,7 +77,6 @@ $('#attack').on('click', function() {
                 $('#firstLine').text('You defeated ' + characters[currentEnemy]['name'] + '!');
                 $('#secondLine').text('Select another adversary to continue');
                 currentEnemy = '';
-                console.log($('.protagonist').text().replace(/ /g, ''));
             } else {
                 $('#firstLine').text('You have defeated all comers! You Win!')
                 $('#secondLine').empty();
